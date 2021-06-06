@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DesafioTabuada2005 {
+public class DesafioTabuada {
 	public static void main(String[] args) {
 		int resol;
 

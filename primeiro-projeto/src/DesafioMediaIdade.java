@@ -1,5 +1,5 @@
 
-public class desafioMedia {
+public class DesafioMediaIdade {
 	
 	public static void main (String[] args) {
 	int idadePai = 45;

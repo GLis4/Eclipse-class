@@ -1,5 +1,5 @@
 
-public class desafioAnoNascimento2904 {
+public class desafioAnoN{
 
 	public static void main(String[] args) {
 

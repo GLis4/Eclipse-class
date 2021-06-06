@@ -1,5 +1,5 @@
 
-public class DesafioAnoNV22904 {
+public class DesafioAnoN2{
 	public static void main(String[] args) {
 		//versão2
 		int ano = 2000;
