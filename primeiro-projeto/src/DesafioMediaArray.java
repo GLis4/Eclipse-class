@@ -1,9 +1,7 @@
 import java.util.Scanner;
+//05/06/2021 
 
 public class DesafioMediaArray {
-	
-	//desafio: calcular a media das idades das pessoas na casa do usuario. 
-	//05/06/2021 
 	
 	
 	public static void main(String[] args) {
