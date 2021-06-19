@@ -9,7 +9,6 @@ public class metodosExample {
 	
 	public static void InicioPrograma() {
 		System.out.print("Iniciar programa");	
-
 	}
 }
 
