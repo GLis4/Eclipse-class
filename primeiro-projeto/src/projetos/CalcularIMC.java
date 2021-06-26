@@ -14,11 +14,8 @@ public class CalcularIMC {
 		double p = sc.nextDouble();
 		System.out.println("Insira seu altura: ");
 		double a = sc.nextDouble();
-		System.out.println("Você é: ( 1- H/ 2- M )");
-		int s = sc.nextInt();
 		sc.close();
 		calcularIMC(p, a);
-		calcularPesoIdeal(a, s);
 
 	}
 
@@ -32,7 +29,7 @@ public class CalcularIMC {
 	}
 
 	static void exibirClassificacaoIMC(double imc) {
-		
+
 		if(imc < 18.5) {
 			System.out.print("Classificação: Magreza" );	
 		}else if (imc <=18.5 && imc >= 24.9 ) {
@@ -45,20 +42,6 @@ public class CalcularIMC {
 			System.out.print("Classificação: Obesidade" );
 		}
 	} 
-	static void calcularPesoIdeal(double altura, int sexo) {
-	
-		
-		
-		switch(sexo) {
-		case 1:
-		double pesoIdealH = +(altura-100) * 0.90;
-		System.out.print("Seu peso ideal é " + pesoIdealH);
-		break;
-		case 2:
-		double pesoIdealM = +(altura-100) * 0.85;
-		System.out.print("Seu peso ideal é " + pesoIdealM);
-		break;
-		}
-	}
 }
+
 
