@@ -47,25 +47,15 @@ public class ManipularArquivoTXT {
 
 	static void mostrarTexto(File arq){
 		try {
-			//Indicamos o arquivo que será lido
-			java.io.FileReader fileReader = new java.io.FileReader(arq);
-			//Criamos o objeto bufferReader que nos
-			// oferece o método de leitura readLine()
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			java.io.FileReader fr = new java.io.FileReader(arq);
+			BufferedReader br = new BufferedReader(fr);
 
-			//String que irá receber cada linha do arquivo
 			String linha = "";
-			//Fazemos um loop linha a linha no arquivo,
-			// enquanto ele seja diferente de null.
-			//O método readLine() devolve a linha na
-			// posicao do loop para a variavel linha.
-			while ( ( linha = bufferedReader.readLine() ) != null) {
-				//Aqui imprimimos a linha
+			while ( ( linha = br.readLine() ) != null) {
 				System.out.println(linha);
 			}
-			//liberamos o fluxo dos objetos ou fechamos o arquivo
-			fileReader.close();
-			bufferedReader.close();
+			fr.close();
+			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}		
