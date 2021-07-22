@@ -1,0 +1,12 @@
+package objetoExample;
+
+public class AcenderAbajur {
+	public static void main(String[] args) {
+		Abajur abj = new Abajur();
+		
+		
+		abj.cor = "Branco";
+		abj.tipo = "de mesa";
+		
+	}
+}

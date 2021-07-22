@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class SimularCompra {
 	public static void main(String[] args) {
+	
 		pedirDadosUsuario();
-		
-	}static void pedirDadosUsuario() {
+	}
+	
+	static void pedirDadosUsuario() {
 		Scanner sc = new Scanner(System.in); 
 
 		System.out.println("Bem vindo a loja lis \n"
