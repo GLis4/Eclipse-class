@@ -1,0 +1,104 @@
+package desafios.level3;
+
+import java.io.File;
+import java.util.Scanner;
+
+public class ManipularArquivoTXT2 {
+
+	static GerenciarArquivoTexto ga = new GerenciarArquivoTexto();
+	static Scanner sc = new Scanner(System.in);
+	static String localArq; 
+	static String nomeArq; 
+
+	public static void main(String[] args) {
+
+		mostrarMenu();
+		executarMenuOpcoes();
+
+	}
+
+	static void executarMenuOpcoes() {
+		int opcao;
+		opcao = mostrarMenu();
+
+		GerenciarArquivoTexto ga = new GerenciarArquivoTexto();
+
+
+		while(opcao != 0) {
+			
+
+			switch (opcao) {
+			case 1:
+				pedirUsuarioLocalArqENome();
+				ga.criarArquivo(nomeArq, localArq);
+				break;
+			case 2: 
+
+				break;
+
+			case 3:
+
+				break;
+
+			default:
+				System.out.println("Saindo do programa");
+				break;
+			}
+
+		}
+
+		sc.close();
+
+
+	}
+
+	static void checarArquivoExiste(){
+
+		boolean sucesso;
+		if(ga.existeArquivo(nomeArq, localArq) == false) {
+			sucesso =  ga.criarArquivo(nomeArq, localArq);
+			if(sucesso) {
+				System.out.println("Arquivo criado com sucesso");
+			} else {
+				System.out.println("Arquivo não criado com sucesso");
+			}
+		} else {
+			System.out.println("Arquivo já existe, nao sera criado outro");
+		}
+	}
+
+	static void pedirUsuarioLocalArqENome() {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Qual o local que o arquivo será criado?");
+		localArq = sc.next();
+		System.out.println("Qual o nome do arquivo");
+		nomeArq = sc.next();
+		sc.close();
+	} 
+
+	static void gravarNomeArq() {
+
+		File f = new File(localArq);
+		System.out.println("Digite o nome que deseja salvar");
+		String nome = sc.next();
+		ga.escrever(f, nome);
+
+
+		String texto = ga.capturarTexto(f);
+		System.out.println(texto);
+
+	}
+	
+	static int mostrarMenu() {
+		int opcao;
+		
+		System.out.println("Escolha uma opcao");
+		System.out.println("1 - Criar arquivo");
+		System.out.println("2 - Escrever arquivo");
+		System.out.println("3 - Mostrar conteudo do arquivo");
+		System.out.println("0 - Sair");
+
+		return opcao = Integer.parseInt(sc.nextLine());
+	}
+}
