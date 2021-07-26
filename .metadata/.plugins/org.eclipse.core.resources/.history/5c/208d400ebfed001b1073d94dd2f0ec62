@@ -1,0 +1,78 @@
+package musicfy;
+
+import java.util.Scanner;
+
+public class Tela {
+
+	public static void main(String[] args) {
+
+		int opcao;
+		String nome = null;
+		String genero = null;
+		double duracao = 0;
+		String artista = null;
+
+		Scanner sc = new Scanner(System.in);
+		do {	
+			System.out.println("0- Sair");
+			System.out.println("1- Incluir Musica");
+			System.out.println("2- Consultar Musica");
+			System.out.println("3- Alterar musica");
+			System.out.println("4- Deletar Musica");
+			opcao = Integer.parseInt(sc.nextLine());
+
+			switch(opcao) {
+
+			case 1 :
+				System.out.println("Informe o nome : ");
+				sc.nextLine();
+				nome = sc.nextLine();
+				System.out.println("Informe o genero : ");
+				genero = sc.nextLine();
+				System.out.println("Informe a duração  : ");
+				duracao = Double.parseDouble(sc.nextLine());
+				System.out.println("Informe o artista : ");
+				sc.nextLine();
+				artista = sc.nextLine();
+				break;
+			case 2:
+				System.out.println("\nMusica");
+				System.out.println("Nome   : " + nome);
+				System.out.println("Genero : " + genero);
+				System.out.println("Duração: " + duracao);
+				System.out.println("Artista: " + artista);
+				break;
+			case 3:
+				if(nome == null && genero == null && duracao == 0 && artista == null ) {
+					System.out.println("Não existe dados para alterar");
+				
+				} else {
+					
+					System.out.println(" 1- Mudar todos os dados \n"+ " 2- Mudar nome \n 3-Mudar genero \n 4- Mudar a duração \n Mudar o nome do artista");
+					String escolhaNegativaPositiva = sc.next();
+					
+					System.out.println("Informe o nome : ");
+					 sc.nextLine();
+					nome = sc.nextLine();
+					System.out.println("Informe o genero : ");
+					genero = sc.nextLine();
+					System.out.println("Informe a duração  : ");
+					duracao = Double.parseDouble(sc.nextLine());
+					System.out.println("Informe o artista : ");
+					artista = sc.nextLine();
+				}
+				break;
+			case 4: 
+				nome = "";
+				genero = "";
+				duracao = 0;
+				artista = "";
+				break;
+			default:
+				System.out.println("Não existe essa opção");
+			}
+		} while(opcao != 0);
+
+	}
+}
+
