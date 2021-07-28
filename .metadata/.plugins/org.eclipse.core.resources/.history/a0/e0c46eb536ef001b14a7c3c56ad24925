@@ -9,25 +9,11 @@ public class Tela {
 
 	public static void main(String[] args) {
 		int opcao = pedirOpcaoMenu();
-		do {	
-			switch(opcao) {
-			case 1 :
-				pedirDadosMusica();
-				break;
-			case 2:
-				mostrarDadosMusica();
-				break;
-			case 3:
-				alterarDadosMusica();
-				break;
-			case 4: 
-				deletarDadosMusica();
-				break;
-			default:
-				System.out.println("Não existe essa opção");
-			}
-		}while(opcao != 0);
-
+	do {	
+		executarOpcaoEscolhida(opcao);
+		
+	}while(opcao!=0);
+	
 	}
 	static void pedirDadosMusica() {
 
@@ -107,7 +93,24 @@ public class Tela {
 		ms.duracao = 0;
 		ms.artista = "";
 	}
-
-}
+	static void executarOpcaoEscolhida(int opcao) {
+			switch(opcao) {
+			case 1 :
+				pedirDadosMusica();
+				break;
+			case 2:
+				mostrarDadosMusica();
+				break;
+			case 3:
+				alterarDadosMusica();
+				break;
+			case 4: 
+				deletarDadosMusica();
+				break;
+			default:
+				System.out.println("Não existe essa opção");
+			} 
+		}
+	}
 
 
