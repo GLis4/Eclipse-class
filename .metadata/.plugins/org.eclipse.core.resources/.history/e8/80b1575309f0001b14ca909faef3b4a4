@@ -8,10 +8,8 @@ public class Tela {
 	static 	Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
-		int opcao;
+		int opcao = pedirOpcaoMenu();
 		do {	
-			opcao = pedirOpcaoMenu();
 			switch(opcao) {
 			case 1 :
 				pedirDadosMusica();

@@ -9,9 +9,8 @@ public class Tela {
 
 	public static void main(String[] args) {
 		
-		int opcao;
 		do {	
-			opcao = pedirOpcaoMenu();
+			int opcao = pedirOpcaoMenu();
 			switch(opcao) {
 			case 1 :
 				pedirDadosMusica();
