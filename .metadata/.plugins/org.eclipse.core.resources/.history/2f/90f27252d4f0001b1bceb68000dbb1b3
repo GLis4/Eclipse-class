@@ -1,0 +1,30 @@
+package empresas.tech;
+
+import java.util.Calendar;
+
+public class TesteIdade {
+	public static void main(String[] args) {
+
+		Calendar c = Calendar.getInstance();
+		c.set(Calendar.YEAR, 2000);
+		c.set(Calendar.DAY_OF_MONTH, 19);
+		c.set(Calendar.MONTH, 1);
+
+		Calendar agora =  Calendar.getInstance();
+		int ano = 0;
+		ano = agora.get(Calendar.YEAR);
+		int anoNasc = c.get(Calendar.YEAR);
+		
+		int idade = ano - anoNasc;
+	System.out.println(idade);
+		/*
+		if(mes < mesNasc) {
+	 			idade--;
+	 		} else {
+	 			if(dia < diaNasc) {
+	 				idade--;
+	 			}
+	 		}
+	 	*/
+	}
+}

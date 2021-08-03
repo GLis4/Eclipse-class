@@ -1,0 +1,31 @@
+package empresas.tech;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class Funcionario {
+	int id;
+	double salario;
+	String nome;
+	double bonus;
+	Date dataNascimento;
+	String endereco;
+	Setor setor;
+	
+	
+	public double retornarGanhos() {
+		double totalGanho = salario + bonus;
+		return totalGanho;
+	}
+	
+	public int calcularIdade(Date data) {
+		int idade = 0;
+		
+		return idade;
+	}
+	
+	public void complementarEndereco(String complemento) {
+		endereco = endereco + complemento;
+	}
+		
+}

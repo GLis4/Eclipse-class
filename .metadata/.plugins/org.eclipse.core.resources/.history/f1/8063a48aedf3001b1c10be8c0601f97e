@@ -1,0 +1,18 @@
+package projetos.hackerankdes;
+
+import java.util.Scanner;
+
+public class DesafiosHR {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		double flut = sc.nextDouble();
+		String txt = sc.nextLine();
+		sc.close();
+
+		System.out.println("String: " + txt );
+		System.out.println("Double: " + flut );
+		System.out.println("Int: " + num );
+
+	}
+}

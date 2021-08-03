@@ -30,11 +30,13 @@ public class AnalisandoTextos {
 	static void compararTamanhoTexto(String textoUm, String textoDois ) {
 		int numPalavra = textoUm.length();
 		int numPalavra2 = textoDois.length();
-
+		
 		if(numPalavra > numPalavra2) {
 			System.out.println("A palavra " + textoUm + " é maior");
-		}else {
+		}else if(numPalavra < numPalavra2) {
 			System.out.println("A palavra " + textoDois + " é maior");
+		}else {
+			System.out.println("As palavras tem o mesmo tamanho");
 		}
 
 	}

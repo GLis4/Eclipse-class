@@ -1,0 +1,22 @@
+package empresas.tech;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class TesteIdade {
+	
+	public static void main(String[] args) {
+		Funcionario f = new Funcionario();
+		Calendar c = Calendar.getInstance();
+		c.set(2004, 10, 10);
+		
+		f.dataNascimento = c;
+		
+		int idade = f.calcularIdade();
+		
+		
+		System.out.println(idade);
+
+
+	}
+}
