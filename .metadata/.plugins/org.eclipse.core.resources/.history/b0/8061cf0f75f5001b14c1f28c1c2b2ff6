@@ -71,17 +71,17 @@ public class AnalisandoTextos {
 				contConDois++;
 		}
 
+		compararConsoante();
 	}
 
 	String compararConsoante() {
-		contarConsoante();
 
 		if (contCon > contConDois) {
 			return textoUm;	
-		}else if (contCon == contConDois){
-			return "";
-		}else {
+		}else if (contCon < contConDois){
 			return textoDois;
+		}	else {
+			return "";
 		}
 
 

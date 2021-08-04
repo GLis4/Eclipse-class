@@ -4,10 +4,6 @@ public class AnalisandoTextos {
 
 	String textoUm;
 	String textoDois; 
-	int contVogais = 0;
-	int contVogaisDois = 0;
-	int contCon = 0;
-	int contConDois = 0;
 
 	String compararTamanhoTexto() {
 		int numPalavra = textoUm.length();
@@ -25,6 +21,8 @@ public class AnalisandoTextos {
 
 	void contarVogais() {
 
+		int contarVogais = 0;
+		int contarVogaisDois = 0;
 
 		char vogais[]  = {'a', 'e', 'i', 'o', 'u'};
 
@@ -33,55 +31,56 @@ public class AnalisandoTextos {
 		for (int i = 0; i < textoUm.length(); i++){
 			char c = textoUm.charAt(i);
 			if (contem (vogais, c))
-				contVogais++;
+				contarVogais++;
 		}
 
 		for (int i = 0; i < textoDois.length(); i++){
 			char c = textoDois.charAt(i);
 			if (contem (vogais, c))
-				contVogaisDois++;
+				contarVogaisDois++;
 		}
+		compararVogais(contarVogais, contarVogaisDois);
 	} 
 
-	String compararVogais() {
-		contarVogais();
+	String compararVogais(int numVTUm, int numVTDois) {
 
-		if (contVogais > contVogaisDois) {
+		if (numVTUm > numVTDois) {
 			return textoUm;	
-		}else if (contVogais < contVogaisDois){
+		}else if (numVTUm == numVTDois){
 			return textoDois;
 		}	else {
 			return "";	
 		}
 	} 
 
-	void contarConsoante() {
-
+	void contarConsoante(String textoUm, String textoDois) {
+		int contarCon = 0;
+		int contarConDois = 0;
 		char con[]  = {'b', 'c', 'd', 'f', 'g', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v','w', 'x', 'y', 'z' };
 
 		for (int i = 0; i < textoUm.length(); i++){
 			char c = textoUm.charAt(i);
 			if (contem (con, c))
-				contCon++;
+				contarCon++;
 		}
 
 		for (int i = 0; i < textoDois.length(); i++){
 			char c = textoDois.charAt(i);
 			if (contem (con, c))
-				contConDois++;
+				contarConDois++;
 		}
 
+		compararConsoante(contarCon, contarConDois);
 	}
 
-	String compararConsoante() {
-		contarConsoante();
+	String compararConsoante(int numVCUm, int numVCDois) {
 
-		if (contCon > contConDois) {
+		if (numVCUm > numVCDois) {
 			return textoUm;	
-		}else if (contCon == contConDois){
-			return "";
-		}else {
+		}else if (numVCUm == numVCDois){
 			return textoDois;
+		}	else {
+			return "";
 		}
 
 
