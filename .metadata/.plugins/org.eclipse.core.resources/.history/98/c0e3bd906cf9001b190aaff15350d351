@@ -1,0 +1,124 @@
+package desafios.level3;
+
+import java.util.Scanner;
+
+public class ProgramaAnalisarTexto {
+
+	public static void main(String[] args) {
+		int opcao = 0;
+		Scanner sc = new Scanner(System.in);
+
+
+
+		do{
+			System.out.println("");
+			System.out.println("Você deseja..." +
+					"\n 0- Sair do programa"+ 
+					" \n 1- Comparar dois textos" +
+					" \n 2- Criptografar com o cifra de cesar"+ 
+					" \n 3- Reverter texto " +
+					" \n 4- verificar se é um palindromo");
+			opcao = sc.nextInt();
+			System.out.println("");
+			executarOpcao(opcao);
+		} while(opcao!= 0 );
+		sc.close();
+	}
+	static void executarOpcao(int opcao) {
+		CriptografandoArqTXT cripto = new CriptografandoArqTXT();
+		Scanner sc = new Scanner(System.in);
+		String textoPalindromo = "";
+
+		switch(opcao) {
+		case 1:
+			pedirDadosUsuario();
+			break;
+		case 2: 
+			System.out.println("Digite o texto que deseja criptografar");
+			String texto = sc.next();
+			System.out.println("Digite o numero de rotações que deseja");
+			int chave =	sc.nextInt();
+
+			System.out.println("Resultado do texto criptografado: "+cripto.aplicarCifradeCesar(texto, chave));
+			break;
+
+		case 3: 
+
+			System.out.println("Digite o texto que deseja reverter");
+			String textoRevert = sc.next();
+
+			System.out.println("Resultado do texto revertido:" + cripto.reverterTexto(textoRevert));
+			break;
+
+		case 4: 
+			StringBuffer n = new StringBuffer(textoPalindromo);
+
+			System.out.println("Digite o texto que deseja checar");
+			textoPalindromo = sc.nextLine();
+			StringBuffer textoCon = n.append(textoPalindromo);
+
+
+			System.out.println(textoCon);
+			StringBuffer wordRevert =  n.reverse();
+			System.out.println(wordRevert);
+
+
+			int respEPalindromo = cripto.checarPalindromo(textoCon, wordRevert);
+			System.out.println(respEPalindromo);
+			//if (respEPalindromo == 1) {
+			//System.out.println("O texto " + textoPalindromo + " é palindromo.");
+			//	}else if (respEPalindromo == 0) {
+			//	System.out.println("O texto " + textoPalindromo + " não é palindromo.");
+
+			//}
+			break;
+
+		}
+
+	} 
+
+
+	static void exibindoResult() {
+		String tamanhoTXT;
+		String quantVogal;
+		String quantCon;
+
+		tamanhoTXT = AnalisandoTextos.compararTamanhoTexto();
+		if (tamanhoTXT.equals("")) {
+			System.out.println("as duas tem o mesmo tamanho ");
+		}else {
+			System.out.println("A palavra " + tamanhoTXT + " é a maior");
+		}
+
+		quantVogal = AnalisandoTextos.compararVogais();
+		if (quantVogal.equals("")) {
+			System.out.println("as duas tem o mesmo numero de vogais. ");
+		}else {
+			System.out.println("A palavra " + quantVogal + " tem mais vogais. ");
+		}
+
+		quantCon = AnalisandoTextos.compararConsoante();
+		if (quantCon.equals("")) {
+			System.out.println("as duas tem o mesmo numero de consoante. ");
+		}else {
+			System.out.println("A palavra " + quantCon + " tem mais consoante. ");
+		}
+
+
+	}
+
+	static void pedirDadosUsuario() {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Insira a primeira palavra: ");
+		AnalisandoTextos.textoUm = sc.next();
+		System.out.println("Insira a segunda palavra: ");
+		AnalisandoTextos.textoDois = sc.next();
+		AnalisandoTextos.textoUm.toLowerCase();
+		AnalisandoTextos.textoDois.toLowerCase();	
+		sc.close();
+
+		exibindoResult();
+
+	}
+}

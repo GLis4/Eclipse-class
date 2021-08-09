@@ -1,0 +1,19 @@
+package musicfy;
+
+public class Artista {
+	String nome;
+	String Genero;
+	Album album;
+	
+	void modificarMusica() {
+		
+	}
+	
+	void modificarDadosArtista() {
+		
+	}
+	
+	void modificarAlbum() {
+		
+	}
+}

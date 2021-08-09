@@ -2,14 +2,14 @@ package desafios.level3;
 
 public class AnalisandoTextos {
 
-	String textoUm;
-	String textoDois; 
-	int contVogais = 0;
-	int contVogaisDois = 0;
-	int contCon = 0;
-	int contConDois = 0;
+	static String textoUm;
+	static String textoDois; 
+	static int contVogais = 0;
+	static int contVogaisDois = 0;
+	static int contCon = 0;
+	static int contConDois = 0;
 
-	String compararTamanhoTexto() {
+	static String compararTamanhoTexto() {
 		int numPalavra = textoUm.length();
 		int numPalavra2 = textoDois.length();
 
@@ -23,7 +23,7 @@ public class AnalisandoTextos {
 
 	}
 
-	void contarVogais() {
+	static void contarVogais() {
 
 
 		char vogais[]  = {'a', 'e', 'i', 'o', 'u'};
@@ -43,7 +43,7 @@ public class AnalisandoTextos {
 		}
 	} 
 
-	String compararVogais() {
+	static String compararVogais() {
 		contarVogais();
 
 		if (contVogais > contVogaisDois) {
@@ -55,7 +55,7 @@ public class AnalisandoTextos {
 		}
 	} 
 
-	void contarConsoante() {
+	static	void contarConsoante() {
 
 		char con[]  = {'b', 'c', 'd', 'f', 'g', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v','w', 'x', 'y', 'z' };
 
@@ -73,7 +73,7 @@ public class AnalisandoTextos {
 
 	}
 
-	String compararConsoante() {
+	static String compararConsoante() {
 		contarConsoante();
 
 		if (contCon > contConDois) {
@@ -87,7 +87,7 @@ public class AnalisandoTextos {
 
 	}	
 
-	boolean contem (char vetor[], char comparacao){
+	static boolean contem (char vetor[], char comparacao){
 		boolean flag = false;
 
 		for (int i = 0; i < vetor.length; i++){

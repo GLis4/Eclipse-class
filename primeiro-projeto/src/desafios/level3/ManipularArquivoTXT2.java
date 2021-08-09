@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class ManipularArquivoTXT2 {
 	
 	static GerenciarArquivoTexto ga = new GerenciarArquivoTexto();
+	
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
-	
 	}
 
 	static int mostrarMenuOpcao() {

@@ -1,0 +1,21 @@
+package desafios.level3;
+
+public class CriptografandoArqTXT {
+	
+	public static void main(String[] args) {
+		
+		String result = criptografa("magic", 2);
+		System.out.println(result);
+	}
+	
+	public static String criptografa(String texto, int chave) {
+		int n = texto.length();
+		String palavraCripto = "";
+
+		for (int i = 0; i < n; i++) {
+			palavraCripto = palavraCripto + (char)(texto.charAt(i) + chave);
+		}
+
+		return palavraCripto;
+	}
+}
