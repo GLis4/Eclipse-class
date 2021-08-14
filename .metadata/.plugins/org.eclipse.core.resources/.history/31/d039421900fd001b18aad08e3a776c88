@@ -1,0 +1,10 @@
+package musicfy;
+
+public class Plano {
+
+	String nome;
+	int valor;
+	String duração;
+	
+	
+}

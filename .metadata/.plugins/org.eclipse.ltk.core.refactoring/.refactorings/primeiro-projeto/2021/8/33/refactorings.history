@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;musicfy.Tela&apos; to &apos;TelaInicial&apos;&#x0D;&#x0A;- Original project: &apos;primeiro-projeto&apos;&#x0D;&#x0A;- Original element: &apos;musicfy.Tela&apos;&#x0D;&#x0A;- Renamed element: &apos;musicfy.TelaInicial&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Tela&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;musicfy{Tela.java[Tela" matchStrategy="1" name="TelaInicial" qualified="false" references="true" similarDeclarations="false" stamp="1628947926997" textual="false" version="1.0"/>
+</session>

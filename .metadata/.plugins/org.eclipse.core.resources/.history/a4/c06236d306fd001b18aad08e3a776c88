@@ -1,0 +1,104 @@
+package musicfy;
+
+import java.util.Scanner;
+
+public class TelaArtista {
+	static	Artista ar = new Artista();
+	static 	Scanner sc = new Scanner(System.in);
+
+	static void executarOpcao() {
+		int opcao;
+		do {
+			
+			System.out.println("0- Voltar para o menu inicial");
+			System.out.println("1- Incluir Artista");
+			System.out.println("2- Consultar Artista");
+			System.out.println("3- Alterar Artista");
+			System.out.println("4- Deletar Artista");
+			opcao=  Integer.parseInt(sc.nextLine());
+			
+			switch(opcao) {
+			case 0:
+				TelaInicial.executarOpcao();
+				break;
+			case 1 :
+				TelaMusica.pedirDadosMusica();
+				break;
+			case 2:
+				TelaMusica.mostrarDadosMusica();
+				break;
+			case 3:
+				TelaMusica.alterarDadosMusica();
+				break;
+			case 4: 
+				System.out.println("Musica deletada");
+				TelaMusica.deletarDadosMusica();
+				break;
+			default:
+				System.out.println("Não existe essa opção");
+			}
+		}while(opcao != 0);		
+	}
+	static void pedirDadosMusica() {
+
+		System.out.println("Informe o nome      : ");
+		ar.nome = sc.nextLine();
+		System.out.println("Informe o genero    : ");
+		ar.genero = sc.nextLine();
+		System.out.println("Informe a descrição : ");
+		ar.descricao = sc.nextLine();
+	} 
+	static void mostrarDadosMusica() {
+		System.out.println("\nArtista");
+		System.out.println("Nome     : " + ar.nome);
+		System.out.println("Genero   : " + ar.genero);
+		System.out.println("Descrição: " + ar.descricao);
+	}
+
+	static void alterarDadosMusica() {
+
+		if(ar.nome == null && ar.genero == null && ar.descricao == null) {
+			System.out.println("Não existe dados para alterar");
+		} else {
+			System.out.println("\n Escolha o(s) dado(s) do artista que devem ser alterados: ");
+			System.out.println(" 1- Mudar todos os dados \n"+ 
+					" 2- Mudar nome \n" +
+					" 3-Mudar genero \n" +
+					" 4- Mudar a descrição ");		
+			int escolhaAlterar =Integer.parseInt( sc.nextLine());
+
+			switch (escolhaAlterar) {
+			case 1: 
+				pedirDadosMusica();
+				break;
+			case 2 : 
+				System.out.println("Informe o nome : ");
+				ar.nome = sc.nextLine();
+				break;
+			case 3 : 
+				System.out.println("Informe o genero : ");
+				ar.genero = sc.nextLine();
+				break;
+			case 4 : 
+				System.out.println("Informe a duração  : ");
+				ar.descricao = sc.nextLine();
+				break;
+			default:
+				System.out.println("Não é uma opção valida");
+				break;
+			}
+		}
+	}
+
+	static void deletarDadosMusica() {
+		if(ar.nome == null && ar.genero == null && ar.descricao ==  null ) {
+			System.out.println("Não existe dados para alterar");
+		} else {
+			
+			ar.nome = "";
+			ar.genero = "";
+			ar.descricao = "";
+		
+		}
+	}
+}

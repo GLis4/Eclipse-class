@@ -1,0 +1,48 @@
+package musicfy;
+
+import java.util.Scanner;
+
+public class Tela {
+
+	static 	Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		executarOpcao();
+	}
+	
+	static int selecionarOpcao(){
+		System.out.println("0- Sair");
+		System.out.println("1- Incluir Musica");
+		System.out.println("2- Consultar Musica");
+		System.out.println("3- Alterar musica");
+		System.out.println("4- Deletar Musica");
+
+		return Integer.parseInt(sc.nextLine());
+	}
+	static void executarOpcao() {
+		int opcao;
+		do {	
+			opcao = selecionarOpcao();
+			switch(opcao) {
+			case 1 :
+				TelaMusica.pedirDadosMusica();
+				break;
+			case 2:
+				TelaMusica.mostrarDadosMusica();
+				break;
+			case 3:
+				TelaMusica.alterarDadosMusica();
+				break;
+			case 4: 
+				System.out.println("Musica deletada");
+				TelaMusica.deletarDadosMusica();
+				break;
+			default:
+				System.out.println("Não existe essa opção");
+			}
+		}while(opcao != 0);
+
+		
+		
+	}
+}

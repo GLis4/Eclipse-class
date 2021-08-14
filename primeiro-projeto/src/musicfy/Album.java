@@ -6,7 +6,6 @@ public class Album {
 
 	String nome;
 	String genero; 
-	Artista artista;
 	Musica musicas;
 	Calendar dataLancamento; 
 	int duracao;

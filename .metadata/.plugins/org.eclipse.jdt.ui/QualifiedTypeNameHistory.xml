@@ -31,4 +31,6 @@
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="musicfy.TelaInicial"/>
+    <fullyQualifiedTypeName name="musicfy.TelaMusica"/>
 </qualifiedTypeNameHistroy>
