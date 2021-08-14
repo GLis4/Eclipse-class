@@ -1,6 +1,7 @@
 package empresas.tech;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class TesteIdade {
 	
@@ -13,7 +14,9 @@ public class TesteIdade {
 		
 		int idade = f.calcularIdade();
 		
+		
 		System.out.println(idade);
+
 
 	}
 }

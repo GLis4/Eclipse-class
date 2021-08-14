@@ -18,7 +18,7 @@ public class Musica {
 	static void tocar() {
 		try {
             File soundDir = new File("C:\\Users\\Laercio\\Music\\tocaai");
-            File soundFile = new File(soundDir, "issonToca (online-audio-converter.com).wav");
+            File soundFile = new File(soundDir, "issonToca.mp3");
             AudioInputStream sound = AudioSystem.getAudioInputStream(soundFile);
             DataLine.Info info = new DataLine.Info(Clip.class, sound.getFormat());
             Clip clip = (Clip) AudioSystem.getLine(info);
