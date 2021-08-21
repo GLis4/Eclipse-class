@@ -1,0 +1,15 @@
+package projetos.hackerankdes;
+
+import java.util.Calendar;
+
+public class DateAndTime {
+	public static void main(String[] args) {
+		//int month = 10;
+		//int day = 11; 
+		int year = 2008 ; 
+
+
+		Calendar c = Calendar.getInstance();
+		System.out.println(c.get(year));  
+	}
+}

@@ -7,13 +7,11 @@ public class TelaInicial {
 	static 	Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		Musica.tocar();
 		selecionarOpcao();
 	}
 	static void selecionarOpcao() {
 		int opcao;
 		do {	
-			
 			System.out.println("0- Sair");
 			System.out.println("1- Musica");
 			System.out.println("2- Artista");
@@ -31,5 +29,4 @@ public class TelaInicial {
 			}
 		}while(opcao != 0);		
 	}
-	
 }

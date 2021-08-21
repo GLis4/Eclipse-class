@@ -5,25 +5,26 @@ import java.util.Scanner;
 public class TelaMusica {
 
 	static	Musica ms = new Musica();
+
 	static 	Scanner sc = new Scanner(System.in);
-	
+	static Musica listMs[] ; 
 	static void selecionarOpcao() {
 		int opcao;
 		do {
-			
+
 			System.out.println("0- Voltar para o menu inicial");
 			System.out.println("1- Incluir Musica");
 			System.out.println("2- Consultar Musica");
 			System.out.println("3- Alterar musica");
 			System.out.println("4- Deletar Musica");
 			opcao=  Integer.parseInt(sc.nextLine());
-			
+
 			switch(opcao) {
 			case 0:
 				TelaInicial.selecionarOpcao();
 				break;
 			case 1 :
-				pedirDadosMusica();
+				incluirDadosMusica();
 				break;
 			case 2:
 				mostrarDadosMusica();
@@ -41,29 +42,41 @@ public class TelaMusica {
 		}while(opcao != 0);		
 	}
 
-	static void pedirDadosMusica() {
+	static void incluirDadosMusica() {
+		System.out.println("Deseja incluir quantas musicas: ");
+		int n = Integer.parseInt(sc.nextLine());
+		listMs = new Musica[n];
 
-		System.out.println("Informe o nome : ");
-		ms.nome = sc.nextLine();
-		System.out.println("Informe o genero : ");
-		ms.genero = sc.nextLine();
-		System.out.println("Informe a duração  : ");
-		ms.duracao = Double.parseDouble(sc.nextLine());
-		System.out.println("Informe o artista : ");
-		ms.artista = sc.nextLine();
+		for(int i = 0; i < n; i++ ) {
+			Musica musica = new Musica();
+
+			System.out.println("Informe o nome : ");
+			musica.nome = sc.nextLine();
+			System.out.println("Informe o genero : ");
+			musica.genero = sc.nextLine();
+			System.out.println("Informe a duração  : ");
+			musica.duracao = Double.parseDouble(sc.nextLine());
+			System.out.println("Informe o artista : ");
+			musica.artista = sc.nextLine();
+
+			listMs[i] = musica;
+		}
 
 	} 
 	static void mostrarDadosMusica() {
-		System.out.println("\nMusica");
-		System.out.println("Nome   : " + ms.nome);
-		System.out.println("Genero : " + ms.genero);
-		System.out.println("Duração: " + ms.duracao);
-		System.out.println("Artista: " + ms.artista + "\n");
+		
+		for(int i = 0; i < listMs.length; i++ ) { 
+			System.out.println("\nMusica #" + i );
+			System.out.println("Nome   : " + listMs[i].nome );
+			System.out.println("Genero : " + listMs[i].genero );
+			System.out.println("Duração: " + listMs[i].duracao );
+			System.out.println("Artista: " + listMs[i].artista );
+		}
 	}
 
 	static void alterarDadosMusica() {
 
-		if(ms.nome == null && ms.genero == null && ms.duracao == 0 && ms.artista == null ) {
+		if(listMs[0].nome == null && listMs[0].genero == null && listMs[0].duracao == 0 && listMs[0].artista == null ) {
 			System.out.println("Não existe dados para alterar");
 
 		} else {
@@ -73,11 +86,12 @@ public class TelaMusica {
 					" 3-Mudar genero \n" +
 					" 4- Mudar a duração \n" + 
 					" 5- Mudar o nome do artista");		
+			
 			int escolhaAlterar =Integer.parseInt( sc.nextLine());
 
 			switch (escolhaAlterar) {
 			case 1: 
-				pedirDadosMusica();
+				incluirDadosMusica();
 				break;
 			case 2 : 
 				System.out.println("Informe o nome : ");

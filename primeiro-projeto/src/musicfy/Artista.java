@@ -9,11 +9,9 @@ public class Artista {
 	void modificarMusica() {
 		
 	}
-	
 	void modificarDadosArtista() {
 		
 	}
-	
 	void modificarAlbum() {
 		
 	}

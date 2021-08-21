@@ -1,0 +1,10 @@
+package projetos.hackerankdes;
+
+public class DateAndTime {
+	public static void main(String[] args) {
+			int month, day, year ; 
+			
+		    getDay(month, day, year);
+		    
+		    }
+	}
