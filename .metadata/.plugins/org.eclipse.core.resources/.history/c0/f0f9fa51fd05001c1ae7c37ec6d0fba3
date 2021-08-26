@@ -62,9 +62,12 @@ public class TelaMusica {
 
 	} 
 	static void mostrarDadosMusica() {
-		
+
+
+
+
 		for(int i = 0; i < listMs.size(); i++ ) { 
-			System.out.println("Musica # " + i + "\n");
+			System.out.println("Musica\n");
 			System.out.println("Nome   : " +listMs.get(0).nome);
 			System.out.println("Genero : " +listMs.get(0).artista);
 			System.out.println("Duração: " +listMs.get(0).genero);
@@ -74,23 +77,57 @@ public class TelaMusica {
 	}
 
 	static void alterarDadosMusica() {
+		Musica change = new Musica();
+		if(listMs.isEmpty()) {
+			System.out.println("Não existe dados para alterar");
 
+		} else {
+			System.out.println("\n Deseja alterar musica numero... (inicia-se em 0)");
+			int indexMusic =Integer.parseInt( sc.nextLine());
+
+			System.out.println(" 1- Mudar todos os dados \n"+ 
+					" 2- Mudar nome \n" +
+					" 3-Mudar genero \n" +
+					" 4- Mudar a duração \n" + 
+					" 5- Mudar o nome do artista");		
+			int escolhaAlterar =Integer.parseInt( sc.nextLine());
+
+			switch (escolhaAlterar) {
+			case 1: 
+				
+				break;
+			case 2 : 
+				System.out.println("Informe o nome : ");
+				listMs.get(indexMusic).nome = sc.nextLine();
+				break;
+			case 3 : 
+				System.out.println("Informe o genero : ");
+				change.genero = sc.nextLine();
+				break;
+			case 4 : 
+				System.out.println("Informe a duração  : ");
+				change.duracao = Double.parseDouble(sc.nextLine());
+				break;
+			case 5 : 
+				System.out.println("Informe o artista : ");
+				change.artista = sc.nextLine();
+				break;
+			default:
+				System.out.println("Não é uma opção valida");
+				break;
+			}
+			listMs.set(indexMusic, change);
+		}
 	}
 
 	static void deletarDadosMusica() {
-		if(listMs.isEmpty()) {
+		if(ms.nome == null && ms.genero == null && ms.duracao == 0 && ms.artista == null ) {
 			System.out.println("Não existe dados para alterar");
 		} else {
-			System.out.println("Deseja remover..." + "\n 1- Todas \n 2- Somente uma musica");
-			int choose = Integer.parseInt(sc.nextLine());
-			switch(choose) { 
-			case 1:
-				listMs.removeAll(listMs);
-			case 2: 
-				System.out.println("Digite o ID da musica");
-			int deleteIndex =  Integer.parseInt(sc.nextLine());
-			listMs.remove(deleteIndex);
-			}
+			ms.nome = "";
+			ms.genero = "";
+			ms.duracao = 0;
+			ms.artista = "";
 		}
 	}
 }

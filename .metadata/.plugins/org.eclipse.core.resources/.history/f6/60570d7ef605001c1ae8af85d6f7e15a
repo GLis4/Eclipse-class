@@ -1,0 +1,20 @@
+package musicfy;
+
+import empresas.tech.Musica;
+
+public class Playlist {
+	String nome;
+	String genero; 
+	Musica musica;
+	int quantMusica;
+	
+	void tocarMusica() {
+		
+	}
+	void pararMusica() {
+		
+	}
+	void tocarMusicaLoop() {
+		
+	}
+}
