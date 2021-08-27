@@ -1,0 +1,8 @@
+package projetos.caixaMercado;
+
+public class TelaVenda {
+
+	Caixa c1 = new Caixa(); 
+	
+	
+}

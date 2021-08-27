@@ -1,0 +1,40 @@
+package projetos.caixaMercado;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Venda {
+
+	String cpfCliente;
+	String formaPagamento;
+	int valorVenda; 
+	Caixa c1 = new Caixa(); 
+	List<String> listCompras = new ArrayList<>();
+	void addProdutos(int id) {
+
+	}
+
+
+	void addProdutoVenda() {
+
+		if(c1.caixaFechado == 1) {
+			System.out.println("Caixa Fechado, execute a abertura de caixa");
+		}else {
+			Scanner sc = new Scanner(System.in);
+
+			System.out.println("Digite o codigo: ");
+			listCompras.add(sc.nextLine());
+		} 
+
+	}
+	
+	int  pagaCartao(int parcela) {
+
+		int	parcelas = valorVenda*parcela;
+		return parcelas; 
+
+	}
+
+
+}

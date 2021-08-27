@@ -1,0 +1,30 @@
+package projetos.caixaMercado;
+
+import java.util.Calendar;
+
+public class Caixa {
+
+	byte id;
+	int valorFechamento; 
+	Calendar dataFechamento;
+	int caixaAberto = 0; 
+
+	boolean aberturaDeCaixa() {
+		if(caixaAberto = 0) {
+			return false;
+		}else {
+			caixaAberto = 1;
+			return true; 
+		}
+	}
+	boolean caixaFechamento() {
+		//calcular valor de vendas do caixa, entrar com a data do dia e fechar.
+		if(caixaAberto = 1) {
+			return false;
+		}else {
+			caixaAberto =  0;
+			return true;
+		}
+	} 
+	
+}
