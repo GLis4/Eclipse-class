@@ -6,43 +6,35 @@ import java.util.Scanner;
 
 public class Venda {
 
-	String cpfCliente;
-	String formaPagamento;
-	
-	Caixa c1 = new Caixa(); 
-	List<Produtos> listCompras = new ArrayList<>();
+	static String cpfCliente;
+	static String formaPagamento;
+	static List<Produtos> listCompras = new ArrayList<>();
 
-	void addProdutos() {
+	public static void addProdutos(int codigo, double valor) {
 
-		if(c1.caixaFechado == 1) {
+		Produtos p = new Produtos();
+		if(Caixa.caixaFechado == 1) {
 			System.out.println("Caixa Fechado, execute a abertura de caixa");
 		}else {
 
-			Scanner sc = new Scanner(System.in);
-			Produtos p = new Produtos();
-			System.out.println("Digite o codigo: ");
-			p.codigo =  Integer.parseInt(sc.nextLine());
-			System.out.println("Digite o valor: ");
-			p.valor = Integer.parseInt(sc.nextLine());
-			System.out.println("Digite quantidade : ");
-			p.valor = p.valor *Integer.parseInt(sc.nextLine());;
+			p.codigo =  codigo;
+			p.valor = valor;
 			listCompras.add(p);
-			sc.close();
 		} 
 
 	}
 
-	int calcularTotal() {
+	public static int calcularTotal() {
 		int valorVenda = 0;
 		for(int i = 0; i <listCompras.size(); i++) {
-			valorVenda += listCompras.get(1).valor;
+			valorVenda += listCompras.get(i).valor;
 		}
 		
 		return valorVenda;
 
 	}
 
-	int  pagaCartao(int parcela, int valorVenda) {
+	static int  pagaCartao(int parcela, int valorVenda) {
 
 		int	parcelas = valorVenda*parcela;
 		return parcelas; 

@@ -4,11 +4,11 @@ import java.util.Calendar;
 
 public class Caixa {
 
-	int valorFechamento; 
-	Calendar dataFechamento;
-	int caixaFechado = 1;
+	static int valorFechamento; 
+	static Calendar dataFechamento;
+	public static int caixaFechado = 1;
 
-	boolean aberturaDeCaixa() {
+	public static boolean aberturaDeCaixa() {
 		if(caixaFechado == 0) {
 			return false;
 		}else {
@@ -16,7 +16,7 @@ public class Caixa {
 			return true; 
 		}
 	}
-	boolean caixaFechamento() {
+	public static boolean caixaFechamento() {
 		//calcular valor de vendas do caixa, entrar com a data do dia e fechar.
 		
 		if(caixaFechado == 1) {

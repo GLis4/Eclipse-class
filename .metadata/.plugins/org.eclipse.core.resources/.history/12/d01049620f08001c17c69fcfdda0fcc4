@@ -1,0 +1,23 @@
+package aulas_assunto.example;
+
+public class CadastroXepa {
+	public static void main(String[] args) {
+
+		int tam = 1;
+		String[] nomes = new String[tam];
+		int opcao = -1;
+		while(opcao != 0) {
+			System.out.println("Digite 1- Cadastras \n 2- Mostrar Cadastrados.");
+			switch(opcao) {
+			
+			case 1 :
+				
+			
+			
+			
+			
+			}
+		}
+		
+	}
+}

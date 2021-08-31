@@ -1,0 +1,19 @@
+package projetos.caixaMercado;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sa = new Scanner(System.in);
+		Caixa.aberturaDeCaixa();
+		int opcao = -1;
+		while(opcao != 0 ) {
+			
+			Venda.addProdutos();
+			opcao = 0;
+		};
+
+		Venda.calcularTotal();
+	}
+}

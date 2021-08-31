@@ -1,0 +1,10 @@
+
+public class Produtos {
+
+	int codigo;	
+	String descricao;
+	double valor;
+	
+	
+	
+}
