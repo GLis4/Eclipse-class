@@ -7,7 +7,7 @@ import projetos.caixaMercado.Venda;
 
 public class CadastroXepa {
 	static Scanner sc = new Scanner(System.in);
-	static int tam = 0;
+
 	static String[] nomes = new String[1];
 
 	public static void main(String[] args) {
@@ -41,8 +41,9 @@ public class CadastroXepa {
 
 	}
 	static void cadastrarNome() {
-		
-		if(tam >= nomes.length) {
+		int tam = 0;
+		if( tam >= nomes.length) {
+
 			String nomeAux [] = new String [nomes.length * 2]; 
 			for (int i = 0; i < nomes.length; i++) {
 				nomeAux [i] = nomes[i];
@@ -52,20 +53,15 @@ public class CadastroXepa {
 
 				nomes[i] = nomeAux[i];
 			}
-
 		}
-		
+
 		System.out.println("Digite nome: ");
 		nomes[tam] = sc.nextLine();
 		tam = tam + 1;
 	}
 	static void mostrarCadastros() {
-		System.out.println(nomes[0]);
-		System.out.println(nomes[1]);
-
-		
-		/*for(int i = 0; i < nomes.length ; i++ ){
+		for(int i = 0; i < nomes.length ; i++ ){
 			System.out.println(nomes[i]);
-		}*/
+		}
 	}
 }
