@@ -2,8 +2,6 @@ package desafios;
 
 import java.util.Scanner;
 
-import projetos.caixaMercado.Caixa;
-import projetos.caixaMercado.Venda;
 
 public class CadastroXepa {
 	static Scanner sc = new Scanner(System.in);
@@ -60,12 +58,8 @@ public class CadastroXepa {
 		tam = tam + 1;
 	}
 	static void mostrarCadastros() {
-		System.out.println(nomes[0]);
-		System.out.println(nomes[1]);
-
-		
-		/*for(int i = 0; i < nomes.length ; i++ ){
+		for(int i = 0; i < nomes.length ; i++ ){
 			System.out.println(nomes[i]);
-		}*/
+		}
 	}
 }

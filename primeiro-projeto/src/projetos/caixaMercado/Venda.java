@@ -2,7 +2,6 @@ package projetos.caixaMercado;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Venda {
 
@@ -24,8 +23,8 @@ public class Venda {
 
 	}
 
-	public static int calcularTotal() {
-		int valorVenda = 0;
+	public static double calcularTotal() {
+		double valorVenda = 0;
 		for(int i = 0; i <listCompras.size(); i++) {
 			valorVenda += listCompras.get(i).valor;
 		}

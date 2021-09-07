@@ -29,8 +29,10 @@ public class CadastroXepaArrayList {
 			case 0 : 
 				opcao = 0;
 				sc.close();
+				break;
 			default: 
 				System.out.println("Opcao não existe");
+				break;
 			}
 		}
 	}
