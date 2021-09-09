@@ -1,0 +1,36 @@
+package projetos.hackerankdes;
+
+import java.util.Scanner;
+
+public class DataType {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int quant = sc.nextInt();
+		long n = sc.nextLong();
+		String ms = "";
+		
+		try {
+			
+			for(int i = 0; i< quant ; i++) {
+
+				System.out.println(n + " -can be fitted in: \n");
+				if(n > Byte.MIN_VALUE && n < Byte.MAX_VALUE) {
+					
+				}else if(n > Short.MIN_VALUE && n < Short.MAX_VALUE) {
+					System.out.println("*short \n");
+				}else if(n > Integer.MIN_VALUE && n < Integer.MAX_VALUE) {
+					System.out.println("*int \n");
+				}else if(n > Long.MIN_VALUE && n < Long.MAX_VALUE) {
+					System.out.println("*long \n");				}
+				System.out.println(ms);
+			}
+			
+		}
+		catch (Exception e) {
+			System.out.println(n + "can't fit anywhere");
+
+			// TODO: handle exception
+		}
+	}
+}

@@ -1,0 +1,23 @@
+package projetos.hackerankdes;
+
+import java.util.Scanner;
+
+public class DataType {
+	public static void main(String[] args) {
+
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		try {
+			String t = sc.nextLine();
+			
+			if( t.length() > Byte.MIN_VALUE && t.length() < Byte.MAX_VALUE ) {
+				System.out.println(" cabe no byte");
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

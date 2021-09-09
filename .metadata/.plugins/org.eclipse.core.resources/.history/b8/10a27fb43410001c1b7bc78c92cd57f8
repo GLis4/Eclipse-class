@@ -1,0 +1,13 @@
+package projetos.hackerankdes;
+
+public class IfElse {
+	public static void main(String[] args) {
+		
+		int n = 24;
+		String ans = "";
+		if (n%2 == 0 && (n>20 || n < 6)) { ans += "Not "; }
+		ans += "Weird";
+		System.out.println(ans);
+
+	}
+}
