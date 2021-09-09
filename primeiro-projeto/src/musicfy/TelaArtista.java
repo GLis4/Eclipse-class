@@ -1,10 +1,14 @@
 package musicfy;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class TelaArtista {
-	static	Artista ar = new Artista();
+	
 	static 	Scanner sc = new Scanner(System.in);
+	static List<Artista> listArt = new ArrayList<>();
+
 
 	static void executarOpcao() {
 		int opcao;
@@ -40,30 +44,33 @@ public class TelaArtista {
 		}while(opcao != 0);		
 	}
 	static void pedirDadosArtista() {
-
+		 Artista ar = new Artista();
+		
 		System.out.println("Informe o nome      : ");
 		ar.nome = sc.nextLine();
 		System.out.println("Informe o genero    : ");
 		ar.genero = sc.nextLine();
-		System.out.println("Informe a descrição : ");
-		ar.descricao = sc.nextLine();
+		
+		listArt.add(ar);
+		
 	} 
 	static void mostrarDadosArtista() {
-		System.out.println("\nArtista");
-		System.out.println("Nome     : " + ar.nome);
-		System.out.println("Genero   : " + ar.genero);
-		System.out.println("Descrição: " + ar.descricao);
+		for(int i= 0; i<listArt.size(); i++) {
+			System.out.println("\nArtista");
+			System.out.println("Nome     : " + listArt.get(i).nome);
+			System.out.println("Genero   : " + listArt.get(i).nome);
+		}
+		
 	}
 
 	static void alterarDadosArtista() {
 
-		if(ar.nome == null && ar.genero == null && ar.descricao == null) {
+		if(listArt.isEmpty()) {
 			System.out.println("Não existe dados para alterar");
 		} else {
 			System.out.println("\n Escolha o(s) dado(s) do artista que devem ser alterados: ");
 			System.out.println(" 1- Mudar todos os dados \n"+ 
 					" 2- Mudar nome \n" +
-					" 3-Mudar genero \n" +
 					" 4- Mudar a descrição ");		
 			int escolhaAlterar =Integer.parseInt( sc.nextLine());
 
@@ -73,15 +80,11 @@ public class TelaArtista {
 				break;
 			case 2 : 
 				System.out.println("Informe o nome : ");
-				ar.nome = sc.nextLine();
+				listArt.get(0).nome = sc.nextLine();
 				break;
 			case 3 : 
 				System.out.println("Informe o genero : ");
-				ar.genero = sc.nextLine();
-				break;
-			case 4 : 
-				System.out.println("Informe a duração  : ");
-				ar.descricao = sc.nextLine();
+				listArt.get(0).genero = sc.nextLine();
 				break;
 			default:
 				System.out.println("Não é uma opção valida");
@@ -91,13 +94,11 @@ public class TelaArtista {
 	}
 
 	static void deletarDadosArtista() {
-		if(ar.nome == null && ar.genero == null && ar.descricao ==  null ) {
+		if(listArt.isEmpty() ) {
 			System.out.println("Não existe dados para alterar");
 		} else {
+			listArt.remove(0);
 			
-			ar.nome = "";
-			ar.genero = "";
-			ar.descricao = "";
 		
 		}
 	}

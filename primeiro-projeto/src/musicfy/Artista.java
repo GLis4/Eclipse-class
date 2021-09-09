@@ -3,8 +3,7 @@ package musicfy;
 public class Artista {
 	String nome;
 	String genero;
-	Album album;
-	String descricao;
+	int albumEsingles;
 	
 	void modificarMusica() {
 		

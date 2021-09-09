@@ -57,11 +57,12 @@ public class TelaMusica {
 		musica.duracao = Double.parseDouble(sc.nextLine());
 
 		int opcao = -1;
-		do {
+		while(opcao != 0); {
 			System.out.println("0 - Finalizado Cadastro \n 1- Incluir novo artista\n 2- escolher artista já cadastrados ");
 			opcao = Integer.parseInt(sc.nextLine());
 
 			switch(opcao) {
+
 			case 1: 
 				Artista art = new Artista();
 				System.out.println("Informe o nome : ");
@@ -85,8 +86,10 @@ public class TelaMusica {
 
 				}
 				break;
+
 			}
-		}while(opcao != 0);
+
+
 
 		listMs.add(musica);
 
@@ -95,10 +98,10 @@ public class TelaMusica {
 
 		for(int i = 0; i < listMs.size(); i++ ) { 
 			System.out.println("Musica # " + i + "\n");
-			System.out.println("Nome   : " + listMs.get(i).nome);
-			System.out.println("Genero : " + listMs.get(i).genero);
-			System.out.println("Duração: " + listMs.get(i).duracao);
-			System.out.println("Artista: " + listMs.get(i).artista.nome);
+			System.out.println("Nome   : " +listMs.get(i).nome);
+			System.out.println("Genero : " +listMs.get(i).artista);
+			System.out.println("Duração: " +listMs.get(i).genero);
+			System.out.println("Artista: " + listMs.get(i).duracao);
 			System.out.println();
 		}
 	}

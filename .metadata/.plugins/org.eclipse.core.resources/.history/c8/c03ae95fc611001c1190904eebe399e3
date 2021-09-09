@@ -95,10 +95,10 @@ public class TelaMusica {
 
 		for(int i = 0; i < listMs.size(); i++ ) { 
 			System.out.println("Musica # " + i + "\n");
-			System.out.println("Nome   : " + listMs.get(i).nome);
-			System.out.println("Genero : " + listMs.get(i).genero);
-			System.out.println("Duração: " + listMs.get(i).duracao);
-			System.out.println("Artista: " + listMs.get(i).artista.nome);
+			System.out.println("Nome   : " +listMs.get(i).nome);
+			System.out.println("Genero : " +listMs.get(i).artista.nome);
+			System.out.println("Duração: " +listMs.get(i).genero);
+			System.out.println("Artista: " + listMs.get(i).duracao);
 			System.out.println();
 		}
 	}

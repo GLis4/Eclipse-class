@@ -4,7 +4,7 @@ public class Musica {
 
 	String nome;
 	String genero;
-	String artista;
+	Artista artista;
 	double duracao;
 	void tocar() {
 
