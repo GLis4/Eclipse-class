@@ -56,7 +56,7 @@ public class TelaMusica {
 		System.out.println("Informe a duração  : ");
 		music.duracao = Double.parseDouble(sc.nextLine());
 
-		incluirArtistaMusica(music);
+		incluirArtistaMusica( music);
 
 		listMs.add(music);
 
@@ -107,7 +107,7 @@ public class TelaMusica {
 		}
 	}
 
-	static void incluirArtistaMusica(Musica musica) {
+	static void incluirArtistaMusica( Musica musica) {
 		int opcao = -1 ;
 		while(opcao != 0){	
 			System.out.println(" 0 - Finalizar escolha artista \n 1- Incluir novo artista\n 2- escolher artista já cadastrados ");
@@ -119,6 +119,16 @@ public class TelaMusica {
 				TelaArtista.pedirDadosArtista();
 				musica.artista = TelaArtista.listArt.get(TelaArtista.listArt.size()); 
 	
+				/*Artista art = new Artista();
+				musica.artista = art;
+				System.out.println("Informe o nome : ");
+				art.nome = sc.nextLine();
+				System.out.println("Informe o genero : ");
+				art.genero = sc.nextLine();
+
+				TelaArtista.listArt.add(art);
+				musica.artista = art;
+				 */
 				
 				break;
 			case 2 :

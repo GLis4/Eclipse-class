@@ -37,8 +37,8 @@ public class TelaMusica {
 				alterarDadosMusica();
 				break;
 			case 4: 
-				TelaMusica.deletarDadosMusica();
 				System.out.println("Musica deletada");
+				TelaMusica.deletarDadosMusica();
 				break;
 			default:
 				System.out.println("Não existe essa opção");
@@ -48,20 +48,52 @@ public class TelaMusica {
 
 	static void incluirDadosMusica() {
 
-		Musica music = new Musica();
+		Musica musica = new Musica();
 		System.out.println("Informe o nome : ");
-		music.nome = sc.nextLine();
+		musica.nome = sc.nextLine();
 		System.out.println("Informe o genero : ");
-		music.genero = sc.nextLine();
+		musica.genero = sc.nextLine();
 		System.out.println("Informe a duração  : ");
-		music.duracao = Double.parseDouble(sc.nextLine());
+		musica.duracao = Double.parseDouble(sc.nextLine());
 
-		incluirArtistaMusica(music);
+		int opcao = -1;
+		do {
+			System.out.println("0 - Finalizado Cadastro \n 1- Incluir novo artista\n 2- escolher artista já cadastrados ");
+			opcao = Integer.parseInt(sc.nextLine());
 
-		listMs.add(music);
+			switch(opcao) {
+			case 1: 
+				Artista art = new Artista();
+				System.out.println("Informe o nome : ");
+				art.nome = sc.nextLine();
+				System.out.println("Informe o genero : ");
+				art.genero = sc.nextLine();
+				musica.artista = art;
+				break;
+			case 2 :
+					if(TelaArtista.listArt.isEmpty()) {
+						System.out.println("Não existe nenhum artista cadastrado");
+					}else {
+						for(int i = 0; i < TelaArtista.listArt.size(); i++ ) { 
+							System.out.println("Artistas cadastrados: \n");
+							System.out.println("# " + i +  "Nome    : " + TelaArtista.listArt.get(i).nome);
+							System.out.println("Está musica pertence ao artista...");
+							int idArt = Integer.parseInt(sc.nextLine());
+							musica.artista = TelaArtista.listArt.get(idArt);
+						}
+
+
+					}
+				
+				
+				
+				break;
+			}
+		}while(musica.artista.equals(null));
+
+		listMs.add(musica);
 
 	} 
-
 	static void mostrarDadosMusica() {
 
 		for(int i = 0; i < listMs.size(); i++ ) { 
@@ -87,53 +119,20 @@ public class TelaMusica {
 			switch(choose) { 
 			case 1:
 				listMs.removeAll(listMs);
-				break;
 			case 2: 
 
 				for(int i = 0; i < listMs.size(); i++ ) { 
 					System.out.println("Musica # " + i + "\n");
-					System.out.println("Nome   : " + listMs.get(i).nome);
-					System.out.println("Genero : " + listMs.get(i).genero);
-					System.out.println("Duração: " + listMs.get(i).duracao);
-					System.out.println("Artista: " + listMs.get(i).artista.nome);
+					System.out.println("Nome   : " +listMs.get(i).nome);
+					System.out.println("Genero : " +listMs.get(i).artista);
+					System.out.println("Duração: " +listMs.get(i).genero);
+					System.out.println("Artista: " + listMs.get(i).duracao);
 					System.out.println();
 				}
 
 				System.out.println("Digite o ID da musica que deseja deletar: ");
 				int deleteIndex =  Integer.parseInt(sc.nextLine());
 				listMs.remove(deleteIndex);
-				break;
-			}
-		}
-	}
-
-	static void incluirArtistaMusica(Musica musica) {
-		int opcao = -1 ;
-		while(opcao != 0){	
-			System.out.println(" 0 - Finalizar escolha artista \n 1- Incluir novo artista\n 2- escolher artista já cadastrados ");
-			opcao = Integer.parseInt(sc.nextLine());
-
-			switch(opcao) {
-			case 1: 
-
-				TelaArtista.pedirDadosArtista();
-				musica.artista = TelaArtista.listArt.get(TelaArtista.listArt.size()); 
-	
-				
-				break;
-			case 2 :
-				if(TelaArtista.listArt.isEmpty()) {
-					System.out.println("Não existe nenhum artista cadastrado");
-				}else {
-					for(int i = 0; i < TelaArtista.listArt.size(); i++ ) { 
-						System.out.println("Artistas cadastrados: \n");
-						System.out.println("#" + i +  "  Nome    : " + TelaArtista.listArt.get(i).nome);
-						System.out.println("Está musica pertence ao artista...");
-						int idArt = Integer.parseInt(sc.nextLine());
-						musica.artista = TelaArtista.listArt.get(idArt);
-					}
-				}
-				break;
 			}
 		}
 	}
