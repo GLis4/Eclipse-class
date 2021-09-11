@@ -58,7 +58,5 @@ public class GerenciarArquivoTexto {
 			e.printStackTrace();
 			return "";
 		}
-
-
 	}
 }

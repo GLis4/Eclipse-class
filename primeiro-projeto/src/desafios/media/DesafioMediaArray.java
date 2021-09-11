@@ -22,7 +22,7 @@ public class DesafioMediaArray {
 		}
 		
 		int media = soma/idadeCasa.length;
-		System.out.print(idadeCasa[1]);
+		
 		System.out.print("A media da sua casa é: " + media);
 		sc.close();
 

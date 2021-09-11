@@ -1,6 +1,7 @@
 package desafios.level3.manipularArqTexto;
 
 import java.io.File;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -13,28 +14,26 @@ public class ManipularArquivoTXT2 {
 
 	public static void main(String[] args) {
 
-		executarMenu();
+		selecionarMenuOpcao();
 	}
 
-	static int mostrarMenuOpcao() {
 
-		System.out.println("Escolha uma opcao");
-		System.out.println("1 - Criar arquivo");
-		System.out.println("2 - Escrever arquivo");
-		System.out.println("3 - Mostrar conteudo do arquivo");
-		System.out.println("0 - Sair");
 
-		return	Integer.parseInt(sc.nextLine());
-	}
+	static void selecionarMenuOpcao() {
 
-	static void executarMenu() {
-		
 		Scanner sc = new Scanner(System.in);
 		int opcao = 1;
 
 		while(opcao != 0) {
-			opcao = mostrarMenuOpcao();
-
+			System.out.println("Escolha uma opcao");
+			System.out.println("1 - Criar arquivo");
+			System.out.println("2 - Escrever arquivo");
+			System.out.println("3 - Mostrar conteudo do arquivo");
+			System.out.println("4 - Ordenar o conteudo em ordem alfabetica(crescente)");
+			System.out.println("0 - Sair");
+		
+			
+			opcao = Integer.parseInt(sc.nextLine());
 
 			switch (opcao) {
 			case 1:
@@ -70,6 +69,9 @@ public class ManipularArquivoTXT2 {
 				}
 				break;
 
+			case 4 : 
+			 ordenarTextoArquivo();
+			 break;
 			case 0 :
 				System.out.println("Saindo do programa");
 				break;
@@ -84,7 +86,16 @@ public class ManipularArquivoTXT2 {
 
 
 	}
-
+	  static void ordenarTextoArquivo() {
+		File f = new File(local, arquivo);
+		List<String> b = OrganiArqTXT.organizarOrdemCrescenteAlfabetica(f);
+		
+		for(int i = 0; i< b.size(); i++) {
+			System.out.println(b.get(i));
+			}
+	
+	}
+	  
 	static void criarArquivo() {
 		System.out.println("Qual o nome do arquivo");
 		arquivo = sc.nextLine();

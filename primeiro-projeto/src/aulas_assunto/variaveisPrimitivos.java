@@ -7,7 +7,15 @@ public class variaveisPrimitivos {
 		byte vByte = 120;
 		int vInt = 5;
 		double vDouble = 3.35;
-		  System.out.print(vByte + vDouble/vInt);
+		char vChar = '#';
+		
+		System.out.println("Char   : " + vChar+
+						 "\nByte   : " + vByte +
+						 "\nDouble : " + vDouble +
+						 "\nInt    : " + vInt);
+		
+		
+		System.out.print(vChar + vByte + vDouble/vInt);
 		  
 	}
 	
