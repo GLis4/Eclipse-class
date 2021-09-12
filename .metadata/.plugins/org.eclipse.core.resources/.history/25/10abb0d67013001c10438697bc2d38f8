@@ -77,7 +77,7 @@ public class TelaArtista {
 
 			switch (escolhaAlterar) {
 			case 1: 
-				
+				pedirDadosArtista();
 				break;
 			case 2 : 
 				System.out.println("Informe o nome : ");

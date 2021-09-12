@@ -26,7 +26,7 @@ public class ManipularArquivoTXT2 {
 
 		while(opcao != 0) {
 			System.out.println("Escolha uma opcao");
-			System.out.println("1 - Criar/Cadastrar arquivo");
+			System.out.println("1 - Criar arquivo");
 			System.out.println("2 - Escrever arquivo");
 			System.out.println("3 - Mostrar conteudo do arquivo");
 			System.out.println("4 - Ordenar o conteudo em ordem alfabetica(crescente)");
@@ -40,6 +40,7 @@ public class ManipularArquivoTXT2 {
 				criarArquivo();
 				break;
 			case 2: 
+
 
 				if(local.equalsIgnoreCase("")) {
 

@@ -75,59 +75,16 @@ public class TelaMusica {
 	}
 
 	static void alterarDadosMusica() {
-		if(listMs.isEmpty()) {
-			System.out.println("Não existe dados para alterar");
-		} else {
-
-			
-			mostrarDadosMusica();
-			System.out.println("Deseja alterar musica de numero...");
-			int changeIndex = Integer.parseInt(sc.next());
-			
-			int choose = -1;
-
-			while(choose != 0);{ 
-				System.out.println("0- Voltar menu anterior\n 1- Alterar todos os dados\n2- Alterar nome\n3- Alterar genero\n4- Alterar duração\n5- ALterar artista. ");
-				choose = Integer.parseInt(sc.nextLine());
-				switch(choose) {
-
-					case 1 : 
-						System.out.println("Informe o nome : ");
-						listMs.get(changeIndex).nome = sc.nextLine();
-						System.out.println("Informe o genero : ");
-						listMs.get(changeIndex).genero = sc.nextLine();
-						System.out.println("Informe a duração  : ");
-						listMs.get(changeIndex).duracao = Double.parseDouble(sc.nextLine());
-						incluirArtistaMusica(listMs.get(changeIndex));
-						break;
+		
+		System.out.println("Deseja alterar musica de numero...");
+		mostrarDadosMusica();
+		int changeIndex = Integer.parseInt(sc.nextLine());
+		
+		System.out.println("0- Voltar menu anterior\n 1- Alterar todos os dados\n2- Alterar nome\n3- Alterar genero\n4- Alterar duração\n5- ALterar artista. ");
+		int choose = Integer.parseInt(sc.nextLine());
+		
+		
 	
-					case 2 : 
-						System.out.println("Informe o nome : ");
-						listMs.get(changeIndex).nome = sc.nextLine();
-						break;
-	
-					case 3 : 
-						System.out.println("Informe o genero : ");
-						listMs.get(changeIndex).genero = sc.nextLine();
-						break;
-	
-					case 4 :
-						System.out.println("Informe a duração  : ");
-						listMs.get(changeIndex).duracao = Double.parseDouble(sc.nextLine());
-						break;
-	
-					case 5 : 
-						incluirArtistaMusica(listMs.get(changeIndex));
-						break;
-	
-					default: 
-						System.out.println("opcao invalida...");
-						break;
-
-				}
-			}
-		}
-
 	}
 
 	static void deletarDadosMusica() {
@@ -143,11 +100,11 @@ public class TelaMusica {
 			case 2: 
 
 				mostrarDadosMusica();
-
+				
 				System.out.println("Digite o ID da musica que deseja deletar: ");
 				int deleteIndex =  Integer.parseInt(sc.nextLine());
 				listMs.remove(deleteIndex);
-
+				
 				break;
 			}
 		}
@@ -155,7 +112,7 @@ public class TelaMusica {
 
 	static void incluirArtistaMusica(Musica musica) {
 		int opcao = -1 ;
-
+		
 		while(opcao != 0){	
 			System.out.println(" 0 - Finalizar escolha artista \n 1- Incluir novo artista\n 2- escolher artista já cadastrados ");
 			opcao = Integer.parseInt(sc.nextLine());
@@ -164,9 +121,9 @@ public class TelaMusica {
 			case 1: 
 
 				TelaArtista.pedirDadosArtista();
-				musica.artista = TelaArtista.listArt.get(TelaArtista.listArt.size()-1); 
-
-
+				musica.artista = TelaArtista.listArt.get(TelaArtista.listArt.size()); 
+	
+				
 				break;
 			case 2 :
 				if(TelaArtista.listArt.isEmpty()) {

@@ -79,11 +79,10 @@ public class TelaMusica {
 			System.out.println("Não existe dados para alterar");
 		} else {
 
-			
-			mostrarDadosMusica();
 			System.out.println("Deseja alterar musica de numero...");
-			int changeIndex = Integer.parseInt(sc.next());
-			
+			mostrarDadosMusica();
+			int changeIndex = Integer.parseInt(sc.nextLine());
+
 			int choose = -1;
 
 			while(choose != 0);{ 
@@ -164,7 +163,7 @@ public class TelaMusica {
 			case 1: 
 
 				TelaArtista.pedirDadosArtista();
-				musica.artista = TelaArtista.listArt.get(TelaArtista.listArt.size()-1); 
+				musica.artista = TelaArtista.listArt.get(TelaArtista.listArt.size()); 
 
 
 				break;
