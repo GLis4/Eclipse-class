@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;desafios.CadastroXepaDB&apos; to &apos;ConectandoSQL&apos;&#x0D;&#x0A;- Original project: &apos;primeiro-projeto&apos;&#x0D;&#x0A;- Original element: &apos;desafios.CadastroXepaDB&apos;&#x0D;&#x0A;- Renamed element: &apos;desafios.ConectandoSQL&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CadastroXepaDB&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;desafios{CadastroXepaDB.java[CadastroXepaDB" matchStrategy="1" name="ConectandoSQL" qualified="false" references="true" similarDeclarations="false" stamp="1631838896946" textual="false" version="1.0"/>
+</session>

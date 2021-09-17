@@ -1,0 +1,25 @@
+package desafios;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.sql.*;
+
+public class CadastroXepaDB {
+	static Scanner sc = new Scanner(System.in);
+
+	static List<String> nomes = new ArrayList<>();
+
+	public static void main(String[] args) {
+
+		Connection connection = null;
+		try
+		{
+			// create a database connection
+			connection = DriverManager.getConnection("jdbc:sqlite:sample.db");
+			Statement statement = connection.createStatement();	
+		}catch(SQLException e) {
+			  System.err.println(e.getMessage());
+		}
+		}
+}
