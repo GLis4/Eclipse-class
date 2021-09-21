@@ -1,0 +1,19 @@
+package projetos.hackerankdes;
+
+import java.util.Scanner;
+
+public class StaticRadio {
+	static Scanner sc = new Scanner(System.in);
+	static int  b = sc.nextInt();
+	static int  a = sc.nextInt();
+
+
+	public static void main(String[] args) {
+		if(b<= 0 || a <= 0) {
+			System.out.println("Breadth and height must be positive");
+		}else {
+			int area=b*a;
+			System.out.print(area);
+		}
+	}
+}
