@@ -1,0 +1,34 @@
+package projetos;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GerenciadorIngredientes {
+
+	List<Ingredients> listIng = new ArrayList<>();
+
+
+	void comprarEstoque(){
+
+		Ingredients ing = new Ingredients();
+		ing.nome = "Coca-Cola";
+		ing.qtdEstoque = 1.5;
+
+		int qtd = 2;
+
+		for( int i = 0; i < qtd; i++) {
+			listIng.add(ing);
+		}
+	}
+
+	void PesquisarIngredientes() {
+		
+		Ingredients ing = new Ingredients();
+		ing.nome = "Coca";
+		
+		System.out.println(listIng.contains(ing));
+		
+
+
+	}
+}

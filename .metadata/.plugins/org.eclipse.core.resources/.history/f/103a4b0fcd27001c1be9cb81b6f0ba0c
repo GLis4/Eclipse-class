@@ -1,0 +1,17 @@
+package projetos;
+
+public class Ingredients {
+	int id;
+	String nome;
+	double qtdEstoque;
+	
+	public void adicionarEstoque(double addEstoque) {
+		qtdEstoque += addEstoque;
+		
+	} 
+	
+	public void removerEstoque(double remEstoque) {
+		qtdEstoque -= remEstoque;
+	}
+	
+}
