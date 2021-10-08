@@ -65,7 +65,7 @@ public class TelaMusica {
 	static void mostrarDadosMusica() {
 
 		for(int i = 0; i < listMs.size(); i++ ) { 
-			System.out.println("Musica # " + i + "\n");
+			System.out.println("Musica # " + i);
 			System.out.println("Nome   : " + listMs.get(i).nome);
 			System.out.println("Genero : " + listMs.get(i).genero);
 			System.out.println("Duração: " + listMs.get(i).duracao);
@@ -78,56 +78,48 @@ public class TelaMusica {
 		if(listMs.isEmpty()) {
 			System.out.println("Não existe dados para alterar");
 		} else {
+			//mostrarDadosMusica();
+			//System.out.println("Deseja alterar musica de numero...");
+			//int changeIndex = Integer.parseInt(sc.next()); 
+			System.out.println("0- Voltar menu anterior\n1- Alterar todos os dados\n2- Alterar nome\n3- Alterar genero\n4- Alterar duração\n5- ALterar artista.");
+			int	choose = Integer.parseInt(sc.nextLine());
+			switch(choose) {
 
-			
-			mostrarDadosMusica();
-			System.out.println("Deseja alterar musica de numero...");
-			int changeIndex = Integer.parseInt(sc.next());
-			
-			int choose = -1;
+			case 1 : 
+				System.out.println("Informe o nome : ");
+				listMs.get(0).nome = sc.nextLine();
+				System.out.println("Informe o genero : ");
+				listMs.get(0).genero = sc.nextLine();
+				System.out.println("Informe a duração  : ");
+				listMs.get(0).duracao = Double.parseDouble(sc.nextLine());
+				incluirArtistaMusica(listMs.get(0));
+				break;
 
-			while(choose != 0);{ 
-				System.out.println("0- Voltar menu anterior\n 1- Alterar todos os dados\n2- Alterar nome\n3- Alterar genero\n4- Alterar duração\n5- ALterar artista. ");
-				choose = Integer.parseInt(sc.nextLine());
-				switch(choose) {
+			case 2 : 
+				System.out.println("Informe o nome : ");
+				listMs.get(0).nome = sc.nextLine();
+				break;
 
-					case 1 : 
-						System.out.println("Informe o nome : ");
-						listMs.get(changeIndex).nome = sc.nextLine();
-						System.out.println("Informe o genero : ");
-						listMs.get(changeIndex).genero = sc.nextLine();
-						System.out.println("Informe a duração  : ");
-						listMs.get(changeIndex).duracao = Double.parseDouble(sc.nextLine());
-						incluirArtistaMusica(listMs.get(changeIndex));
-						break;
-	
-					case 2 : 
-						System.out.println("Informe o nome : ");
-						listMs.get(changeIndex).nome = sc.nextLine();
-						break;
-	
-					case 3 : 
-						System.out.println("Informe o genero : ");
-						listMs.get(changeIndex).genero = sc.nextLine();
-						break;
-	
-					case 4 :
-						System.out.println("Informe a duração  : ");
-						listMs.get(changeIndex).duracao = Double.parseDouble(sc.nextLine());
-						break;
-	
-					case 5 : 
-						incluirArtistaMusica(listMs.get(changeIndex));
-						break;
-	
-					default: 
-						System.out.println("opcao invalida...");
-						break;
+			case 3 : 
+				System.out.println("Informe o genero : ");
+				listMs.get(0).genero = sc.nextLine();
+				break;
 
-				}
+			case 4 :
+				System.out.println("Informe a duração  : ");
+				listMs.get(0).duracao = Double.parseDouble(sc.nextLine());
+				break;
+
+			case 5 : 
+				incluirArtistaMusica(listMs.get(0));
+				break;
+
+			default: 
+				System.out.println("opcao invalida...");
+				break;
+
 			}
 		}
-
 	}
 
 	static void deletarDadosMusica() {

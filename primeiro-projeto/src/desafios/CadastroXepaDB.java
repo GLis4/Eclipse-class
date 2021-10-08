@@ -10,7 +10,6 @@ public class CadastroXepaDB {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		Scanner sc  = new Scanner(System.in);
 		con = new ConectandoSQL("cadastradosXepa.db");
-		con.criarTabela();
 		System.out.println("Digite nome: ");
 		con.insert(sc.nextLine());
 		sc.close();

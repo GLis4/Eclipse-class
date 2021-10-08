@@ -15,18 +15,20 @@ public class GerenciadorIngredientes {
 	}
 	
 	static void PesquisarIngredientes(String pesquisa) {
-
 		for (int i = 0; i < listIng.size(); i++) {
+			
 			if (listIng.get(i).nome.contains(pesquisa)) {
 				System.out.println(listIng.get(i).nome);
 				System.out.println(listIng.get(i).qtdEstoque);
 				System.out.println("");
 			}
+			
 		}
 	}
 	
 	static void baixaEstoque(double removerEstoque) {
 		
 		listIng.get(0).removerEstoque(removerEstoque);
+		
 	}
 }

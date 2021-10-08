@@ -10,17 +10,20 @@ public class Venda {
 	static List<Produtos> listCompras = new ArrayList<>();
 
 	public static void addProdutos(int codigo, double valor) {
-
-		Produtos p = new Produtos();
-		if(Caixa.caixaFechado == 1) {
-			System.out.println("Caixa Fechado, execute a abertura de caixa");
-		}else {
-
-			p.codigo =  codigo;
-			p.valor = valor;
-			listCompras.add(p);
-		} 
-
+		
+		Produtos p;
+		try {
+			p = new Produtos();
+			if(Caixa.caixaFechado == 1) {
+				System.out.println("Caixa Fechado, execute a abertura de caixa");
+			}else {
+				p.codigo =  codigo;
+				p.valor = valor;
+				listCompras.add(p);
+			} 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static double calcularTotal() {
@@ -28,7 +31,6 @@ public class Venda {
 		for(int i = 0; i <listCompras.size(); i++) {
 			valorVenda += listCompras.get(i).valor;
 		}
-		
 		return valorVenda;
 
 	}
