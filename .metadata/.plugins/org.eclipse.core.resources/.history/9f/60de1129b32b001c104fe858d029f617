@@ -1,0 +1,15 @@
+package desafios;
+
+import java.util.Random;
+
+public class SorteioGrupo {
+
+	public static void main(String[] args) {
+
+		String[] nomesAlunos = {"Ana", "Joao", "Love", "Mina1", "Mina2", "Mina3"};
+
+
+
+		System.out.println(6*5*4/3*2*1);
+	}
+}

@@ -11,7 +11,7 @@ public class ReadFile {
     	   System.out.println("" + nLine +" "+ sc.nextLine());
     	   nLine++;
        }
-        
+        sc.close();
        
 		
 	}

@@ -1,0 +1,29 @@
+package desafios;
+
+import java.util.Random;
+
+public class SorteioGrupo {
+
+	public static void main(String[] args) {
+		
+		String[] nomesAlunos = {"Ana", "Joao", "Love", "Mina1", "Mina2", "Mina3"};
+		
+		
+		Random rm = new Random(nomesAlunos.length);
+		
+		
+		
+		for(int i = 0; i < 3; i++) {
+			
+			System.out.println("Grupo #" + i);
+			
+			System.out.println(nomesAlunos[rm.nextInt()]);
+			System.out.println(nomesAlunos[rm.nextInt()]);
+
+		}
+
+	
+	
+	
+	}
+}

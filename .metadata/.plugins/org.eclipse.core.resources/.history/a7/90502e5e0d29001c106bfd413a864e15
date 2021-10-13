@@ -1,0 +1,27 @@
+package projetos.atividadeEstoque;
+
+public class Insumo {
+	
+	int id;
+	int codSistema;
+	String nome;
+	byte categoria;
+	double pCusto;
+	byte medida;
+	double estoqueM;
+	double estoqueA;
+	int sitEstoque;
+	
+	Insumo(){
+	 	id += 1; 
+	}
+	
+	public void adicionarEstoque(double addEstoque) {
+		estoqueM += addEstoque;
+	} 
+	
+	public void removerEstoque(double remEstoque) {
+		estoqueA -= remEstoque;
+	}
+
+}

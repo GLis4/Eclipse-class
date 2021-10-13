@@ -8,7 +8,10 @@ import static java.util.stream.Collectors.toList;
 public class  NumRatio {
 	public static void plusMinus(List<Integer> arr) {
 		// Write your code here
-		int pos = 0, neg = 0, ze = 0;
+		int pos = 0;
+		int neg = 0;
+		int ze = 0;
+		
 
 		for (int i: arr) {
             if (i>0) {

@@ -1,0 +1,13 @@
+package projetos.atividadeEstoque;
+
+public class Insumo {
+
+	static int codSistema;
+	static String nome;
+	static byte categoria;
+	static double pCusto;
+	static byte medida;
+	static double estoqueM;
+	static double estoqueA;
+	static int sitEstoque;
+}

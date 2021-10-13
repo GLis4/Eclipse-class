@@ -1,0 +1,45 @@
+package desafios;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
+
+public class SorteioGrupo {
+
+	public static void main(String[] args) {
+
+
+		String nomes = "Ana,joao,maria,linda,senhora,madame,felix,bang,jinyoung,yugyeom,jimin,namjoon,tae,nome,sela,changbin,hiunjin,";
+
+
+		List<String> nomesAlunos = new ArrayList<>();
+
+		nomesAlunos.addAll(Arrays.asList(nomes.split(",")));
+
+		//List<String> nomesAlunos = new ArrayList<>();
+
+
+
+		Random rm = new Random(nomesAlunos.size());
+
+
+		for(int i = 0 ; i < nomesAlunos.size()-1; i++) {
+
+			int select = rm.nextInt( nomesAlunos.size() + 1);
+
+			if(select + 1  < nomesAlunos.size()) {
+
+				System.out.println("Grupo #" + i);
+
+				System.out.println(nomesAlunos.get(select));
+				System.out.println(nomesAlunos.get(select + 1));
+
+				nomesAlunos.remove(select + 1);
+				nomesAlunos.remove(select);
+			}
+			System.out.println("");
+		}
+	}
+}
