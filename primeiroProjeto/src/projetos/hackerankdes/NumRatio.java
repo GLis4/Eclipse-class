@@ -21,6 +21,8 @@ public class  NumRatio {
             } else {
                 ze++;
             }
+            
+            System.out.println("" + pos + neg + ze);
         }
 
 		 System.out.printf("%.6f\n", (float)pos/arr.size());
@@ -33,6 +35,7 @@ public class  NumRatio {
 		List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
 				.map(Integer::parseInt)
 				.collect(toList());
+		System.out.println(n);
 		plusMinus(arr);
 		bufferedReader.close();
 	}
