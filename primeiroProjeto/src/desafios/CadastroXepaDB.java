@@ -14,10 +14,15 @@ public class CadastroXepaDB {
 		if(con.exist() == false) {
 			con.criarTabela();
 		}
+		
 		System.out.println("Digite nome: ");
-		con.adicionar(sc.nextLine());
-		sc.close();
+		con.adicionar(sc.nextLine(), "cadastrados");
+		
 
+		con.mostrarTudo();
+		System.out.println("Deletar o nome");
+		con.deletarUmValor(sc.nextLine());
+		sc.close();
 		con.mostrarTudo();
 		
 	}

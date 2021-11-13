@@ -7,6 +7,7 @@ public class ConectandoSQL {
 	static Scanner sc = new Scanner(System.in);
 	private Connection conn;
 	private Statement stm;
+	
 
 	public ConectandoSQL(String arquivo) throws SQLException, ClassNotFoundException {
 		Class.forName("org.sqlite.JDBC");
@@ -17,30 +18,49 @@ public class ConectandoSQL {
 
 
 	public void criarTabela() throws SQLException {
-			this.stm.executeUpdate("CREATE TABLE cadastrados ("
+			this.stm.executeUpdate("CREATE TABLE  cadastrados ("
 				+ "nome varchar(70) PRIMARY KEY NOT NULL);");
 	}
 
 
-	public void adicionar(String nome) {		  
+	public void adicionar(String nome, String nomeTabela) {		  
 		try {		  
 			this.stm = this.conn.createStatement();
 
-			this.stm.executeUpdate("INSERT INTO cadastrados VALUES ('"+ nome + "')");
+			this.stm.executeUpdate("INSERT or IGNORE INTO "+ nomeTabela+" VALUES ('"+ nome + "')");
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
+	public void deletarTudo() {
+       
+
+		try {
+			this.stm.executeUpdate("DELETE FROM cadastrados ");
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+
+    }
+	
+	public void deletarUmValor(String nomeDeletar) {
+		try {
+			this.stm.executeUpdate("DELETE FROM cadastrados WHERE nome = ('" + nomeDeletar +"')");
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+	}
+
 
 
 	public void mostrarTudo() {
-		System.out.println("Mostrando dados");
 
 		ResultSet rs;
-
 		try {
-			rs = this.stm.executeQuery("SELECT * FROM cadastrados");
+			rs = this.stm.executeQuery("SELECT * FROM cadastrados" );
 
 			while (rs.next()) {
 				System.out.println(rs.getString("nome"));
@@ -56,6 +76,7 @@ public class ConectandoSQL {
 	}
 	
 	public boolean exist() throws SQLException  {
+
 		DatabaseMetaData metadados = conn.getMetaData();
 		ResultSet tabela = metadados.getTables(null, null, "cadastrados", null);
 		
@@ -63,4 +84,5 @@ public class ConectandoSQL {
 
 	
 	}
+
 }
