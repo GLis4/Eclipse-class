@@ -18,7 +18,6 @@ public class CadastroXepaDB {
 		System.out.println("Digite nome: ");
 		con.adicionar(sc.nextLine(), "cadastrados");
 		
-
 		con.mostrarTudo();
 		System.out.println("Deletar o nome");
 		con.deletarUmValor(sc.nextLine());
