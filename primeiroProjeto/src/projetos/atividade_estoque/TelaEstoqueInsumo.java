@@ -180,6 +180,9 @@ public class TelaEstoqueInsumo {
 			System.out.println("Estoque Atual: ");
 			GerenciadorIngredientes.listIns.get(indexRem).estoqueA = Double.parseDouble(sc.nextLine());
 			break;
+		case 8 :
+			
+			break;
 
 		default: 
 			System.out.println("Opção invalida");

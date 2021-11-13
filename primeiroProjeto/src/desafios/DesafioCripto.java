@@ -19,6 +19,7 @@ public class DesafioCripto {
 		}
 
 		System.out.println(n);
+		sc.close();
 	}
 
 }

@@ -5,6 +5,7 @@ public class Task {
 
 	int id;
 	String description;
+	
 	private Calendar created = Calendar.getInstance();
 	boolean status;
 	String priority;

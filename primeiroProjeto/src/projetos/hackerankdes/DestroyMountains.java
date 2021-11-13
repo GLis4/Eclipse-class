@@ -1,14 +1,11 @@
 package projetos.hackerankdes;
 
-
-import java.util.Scanner;
-
 public class DestroyMountains {
 	public static void main(String[] args) {
 
 		//	98736524
 		//  System.err.println(mountainH);
-		Scanner in = new Scanner(System.in);
+		//Scanner in = new Scanner(System.in);
 		boolean loop = true;
 		// game loop
 		int[] arrH = new int[8];
