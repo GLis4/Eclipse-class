@@ -1,15 +1,18 @@
-package desafios;
+package desafios.teste_SQL;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.sql.*;
 
-public class ConectandoSQL {
+public class ConectandoBancoVacinados {
 	static Scanner sc = new Scanner(System.in);
 	private Connection conn;
 	private Statement stm;
+	List<Pessoa> listCadastrados = new ArrayList<>();
 
 
-	public ConectandoSQL(String arquivo) throws SQLException, ClassNotFoundException {
+	public ConectandoBancoVacinados(String arquivo) throws SQLException, ClassNotFoundException {
 		Class.forName("org.sqlite.JDBC");
 
 		this.conn = DriverManager.getConnection("jdbc:sqlite:" + arquivo);

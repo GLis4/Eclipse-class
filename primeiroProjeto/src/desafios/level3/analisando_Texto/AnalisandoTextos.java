@@ -1,4 +1,4 @@
-package desafios.level3.analisandoTexto;
+package desafios.level3.analisando_Texto;
 
 public class AnalisandoTextos {
 
