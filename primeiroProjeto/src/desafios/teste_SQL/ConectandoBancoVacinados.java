@@ -19,22 +19,21 @@ public class ConectandoBancoVacinados {
 		this.stm = this.conn.createStatement();
 	}
 
-
 	public void criarTabela() throws SQLException {
 		this.stm.executeUpdate("CREATE TABLE  cadastrados ("
-				+ "nome varchar(70) PRIMARY KEY NOT NULL);");
+				+ "nome varchar(70) PRIMARY KEY NOT NULL, idade int);");
 	}
 
-
-	public void adicionar(String nome, String nomeTabela) {		  
+	public void adicionar( String nomeTabela, String nome, int idade) {		  
 		try {		  
 			this.stm = this.conn.createStatement();
-			this.stm.executeUpdate("INSERT or IGNORE INTO "+ nomeTabela +" VALUES ('"+ nome + "')");
+			this.stm.executeUpdate("INSERT or IGNORE INTO "+ nomeTabela +"(nome, idade )VALUES ('"+  nome +"', "+ idade +");");
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
+	
 	public void deletarTudo() {
 
 
@@ -66,6 +65,7 @@ public class ConectandoBancoVacinados {
 
 			while (rs.next()) {
 				System.out.println(rs.getString("nome"));
+				System.out.println(rs.getString("idade"));
 			}
 
 			rs.close();
