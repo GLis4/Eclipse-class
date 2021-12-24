@@ -27,7 +27,7 @@ public class ConectandoBancoVacinados {
 	public void adicionar( String nomeTabela, String nome, int idade) {		  
 		try {		  
 			this.stm = this.conn.createStatement();
-			this.stm.executeUpdate("INSERT or IGNORE INTO "+ nomeTabela +"(nome, idade )VALUES ('"+  nome +"', "+ idade +");");
+			this.stm.executeUpdate("INSERT or IGNORE INTO "+ nomeTabela +"(nome, idade) VALUES ('"+  nome +"', "+ idade +");");
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
