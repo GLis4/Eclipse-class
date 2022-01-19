@@ -1,0 +1,20 @@
+package projetos.todo_list;
+
+
+
+public class ManipularTask {
+
+
+
+	public static void main(String[] args) {
+		Task tsk = new Task();
+
+		tsk.description = "Buy 5 eggs";
+		tsk.done = false;
+		tsk.priority = "low";
+		tsk.created.set(2004, 11, 10, 10, 00);		
+		System.out.println(tsk.calculateTaskAge()+ "\n" + tsk.description );
+
+
+	}
+}

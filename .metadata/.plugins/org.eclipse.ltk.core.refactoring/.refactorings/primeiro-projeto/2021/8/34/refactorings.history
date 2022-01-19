@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;desafios.level3.CriptografandoArqTXT&apos; to &apos;CriptografandoTextos&apos;&#x0D;&#x0A;- Original project: &apos;primeiro-projeto&apos;&#x0D;&#x0A;- Original element: &apos;desafios.level3.CriptografandoArqTXT&apos;&#x0D;&#x0A;- Renamed element: &apos;desafios.level3.CriptografandoTextos&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CriptografandoArqTXT&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;desafios.level3{CriptografandoArqTXT.java[CriptografandoArqTXT" matchStrategy="1" name="CriptografandoTextos" qualified="false" references="true" similarDeclarations="false" stamp="1629067188616" textual="false" version="1.0"/>
-</session>
