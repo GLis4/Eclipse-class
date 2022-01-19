@@ -11,9 +11,10 @@ public class ManipularTask {
 
 		tsk.description = "Buy 5 eggs";
 		tsk.done = false;
-		tsk.priority = "low";
+		tsk.priority = "low";	
 		
-		System.out.println(tsk.calculateTaskAge());
+		//System.out.println(tsk.calculateTaskAge()+ "\n" + tsk.description );
+		System.out.println(Util.formatarTarefa(tsk));
 
 
 	}

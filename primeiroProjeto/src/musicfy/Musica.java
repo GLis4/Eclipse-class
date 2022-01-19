@@ -6,6 +6,7 @@ public class Musica {
 	String genero;
 	Artista artista;
 	double duracao;
+	
 	void tocar() {
 
 	}

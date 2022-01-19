@@ -6,8 +6,13 @@ public class EntradaDoUsuario {
 	
 		Scanner sc = new Scanner (System.in);
 		System.out.print("Digite sua idade: ");
-		int idade = sc.nextInt();
-		System.out.println(idade);
+		
+		try {
+			int idade = sc.nextInt();
+			System.out.println(idade);
+		} catch (Exception e) {
+			System.out.println("Erro ao digitar, entre com um numero valido.");
+		}
 		sc.close();
 
 	} 
