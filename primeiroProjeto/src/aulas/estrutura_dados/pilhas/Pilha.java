@@ -8,13 +8,17 @@ public class Pilha<T> extends staticStructure<T> {
 		super(capacidade);
 	}
 	
-	public void adicionar(T elemento) {
+	public void push(T elemento) {
 		super.adicionar(elemento);
 	}
 	
-	public void geTop() {
-		super.get(tamanho);
+	public T geTop() {
+		if(this.estaVazia()) return null;
+		return super.get(tamanho-1);
 	}
-
 	
+	public T pop() {
+		if(this.estaVazia()) return null;
+		return this.itens[--tamanho];
+	}
 }
