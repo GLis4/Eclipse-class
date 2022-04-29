@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+INDEX VERSION 1.131+C:\Users\Note\Documents\Eclipse-workspace\Eclipse-class\.metadata\.plugins\org.eclipse.jdt.core
+2833036876.index
+=======
 INDEX VERSION 1.131+C:\Users\Lisa\Documents\academico\Programação\Eclipse-class\.metadata\.plugins\org.eclipse.jdt.core
+>>>>>>> eb946a1c5b3c9d87bca39032fc3cb093a96fc6ce
 2557310751.index
 1865797976.index
 1467800137.index
