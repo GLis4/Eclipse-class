@@ -12,7 +12,7 @@ public class Task {
 	String priority;
 
 	Task() {
-		id += 1;
+		setId(getId() + 1);
 		created = Calendar.getInstance(); 
 	} 
 
@@ -35,5 +35,13 @@ public class Task {
 		}
 		if(diff.isEmpty()) return "just created";
 		else return diff;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }
