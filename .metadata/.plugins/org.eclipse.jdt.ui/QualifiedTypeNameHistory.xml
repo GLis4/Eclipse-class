@@ -27,4 +27,5 @@
     <fullyQualifiedTypeName name="java.time.Month"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="aulas.estrutura_dados.base.staticStructure"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
 </qualifiedTypeNameHistroy>
