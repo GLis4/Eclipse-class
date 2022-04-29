@@ -10,7 +10,6 @@ public class Teste {
 		pilha.push(1.50);
 		pilha.push(1.86);
 
-
 		System.out.println(" Tamanho > " + pilha.tamanho);
 		System.out.println(" Topo da pilha > " + pilha.geTop());
 		System.out.println(" Tirou > " + pilha.pop());
