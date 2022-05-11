@@ -3,7 +3,7 @@ package aulas.estrutura_dados.desafio.pilhas;
 import java.util.Random;
 import java.util.Stack;
 
-public class DesafioParOuImpar {
+public class Desafio1ParOuImpar {
 
 	public static Stack<Integer> inteiros = new Stack<Integer>();
 	public static Stack<Integer> test = new Stack<Integer>();
